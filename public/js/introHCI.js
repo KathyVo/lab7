@@ -7,7 +7,9 @@ $(document).ready(function() {
 
 $('.likeBtn').click(function() { 
 	console.log("WEEEE!");
+	var timeSincePageLoad = Math.round(performance.now());
 	ga('send', 'event', 'like', 'click');
+	ga('send', 'timing', 'likes', 'click', timeSincePageLoad);
 })
 /*
  * Function that is called when the document is ready.
